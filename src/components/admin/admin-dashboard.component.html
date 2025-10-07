@@ -1,0 +1,29 @@
+<div class="container mx-auto">
+  @if (user(); as currentUser) {
+    <h1 class="text-3xl font-bold text-white mb-2">Administration Panel</h1>
+    <p class="text-gray-400 mb-8">Welcome, {{ currentUser.name }}. Oversee the platform.</p>
+  }
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- User Management -->
+    <div class="bg-base-200 p-6 rounded-xl shadow-lg border border-gray-800">
+      <h2 class="text-xl font-semibold text-white mb-4">User Management</h2>
+      <p class="text-gray-400">Total users: 1,482</p>
+      <button class="mt-4 w-full bg-gradient-to-r from-primary to-secondary text-white font-bold py-2 px-4 rounded-lg hover:opacity-90 transition-opacity">
+        Manage Users
+      </button>
+    </div>
+    
+    <!-- System Health -->
+    <div class="bg-base-200 p-6 rounded-xl shadow-lg border border-gray-800">
+      <h2 class="text-xl font-semibold text-white mb-4">System Health</h2>
+      <p class="text-gray-400 flex items-center"><span class="h-3 w-3 rounded-full bg-green-500 mr-2"></span>All systems operational.</p>
+    </div>
+    
+    <!-- Platform Settings -->
+    <div class="bg-base-200 p-6 rounded-xl shadow-lg border border-gray-800">
+      <h2 class="text-xl font-semibold text-white mb-4">Platform Settings</h2>
+       <p class="text-gray-400">Configure global platform settings and integrations.</p>
+    </div>
+  </div>
+</div>

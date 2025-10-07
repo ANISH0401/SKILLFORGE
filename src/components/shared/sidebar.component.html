@@ -1,0 +1,26 @@
+<div class="flex flex-col bg-base-200 text-gray-200 transition-all duration-300 ease-in-out" [class]="isOpen() ? 'w-64' : 'w-20'">
+  <!-- Logo -->
+  <div class="flex items-center justify-center h-20 border-b border-gray-700">
+    <div class="flex items-center space-x-2">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd" d="M3 5a2 2 0 012-2h10a2 2 0 012 2v11a2 2 0 01-2 2H5a2 2 0 01-2-2V5zm2-2a1 1 0 00-1 1v11a1 1 0 001 1h4V3H5zM15 3h-4v13h4a1 1 0 001-1V4a1 1 0 00-1-1z" clip-rule="evenodd" />
+      </svg>
+      @if (isOpen()) {
+        <h1 class="text-2xl font-bold">SkillForge</h1>
+      }
+    </div>
+  </div>
+  <!-- Nav -->
+  <nav class="flex-1 px-2 py-4 space-y-2">
+    @for (link of navLinks(); track link.path) {
+      <a [routerLink]="link.path" routerLinkActive="bg-primary/20 text-white" [routerLinkActiveOptions]="{exact: true}"
+        class="flex items-center p-3 rounded-lg text-gray-400 hover:bg-gray-700 hover:text-white transition-colors duration-200"
+        [class.justify-center]="!isOpen()">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" [innerHTML]="link.icon"></svg>
+        @if (isOpen()) {
+          <span class="ml-4 font-medium">{{ link.label }}</span>
+        }
+      </a>
+    }
+  </nav>
+</div>

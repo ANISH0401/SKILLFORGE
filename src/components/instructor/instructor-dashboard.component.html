@@ -1,0 +1,32 @@
+<div class="container mx-auto">
+  @if (user(); as currentUser) {
+    <h1 class="text-3xl font-bold text-white mb-2">Instructor Dashboard</h1>
+    <p class="text-gray-400 mb-8">Welcome, {{ currentUser.name }}. Manage your courses and students.</p>
+  }
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- Course Management -->
+    <div class="bg-base-200 p-6 rounded-xl shadow-lg border border-gray-800">
+      <h2 class="text-xl font-semibold text-white mb-4">My Courses</h2>
+      <p class="text-gray-400">You are currently managing 5 courses.</p>
+       <button class="mt-4 w-full bg-gradient-to-r from-primary to-secondary text-white font-bold py-2 px-4 rounded-lg hover:opacity-90 transition-opacity">
+          Upload New Course
+        </button>
+    </div>
+    
+    <!-- Student Analytics -->
+    <div class="bg-base-200 p-6 rounded-xl shadow-lg border border-gray-800">
+      <h2 class="text-xl font-semibold text-white mb-4">Student Analytics</h2>
+      <p class="text-gray-400">Overall student success rate: 88%.</p>
+    </div>
+    
+    <!-- Quick Actions -->
+    <div class="bg-base-200 p-6 rounded-xl shadow-lg border border-gray-800">
+      <h2 class="text-xl font-semibold text-white mb-4">Quick Actions</h2>
+      <div class="flex flex-col space-y-2">
+        <a href="#" class="text-primary hover:underline">Create a new exam</a>
+        <a href="#" class="text-primary hover:underline">Review submissions</a>
+      </div>
+    </div>
+  </div>
+</div>

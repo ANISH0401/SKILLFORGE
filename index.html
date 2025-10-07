@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>SkillForge</title>
+  <base href="/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'primary': '#14b8a6', // Teal 500
+            'secondary': '#0d9488', // Teal 600
+            'accent': '#10b981',
+            'neutral': '#1f2937',
+            'base-100': '#111827',
+            'base-200': '#1f2937',
+            'base-300': '#374151',
+            'info': '#3abff8',
+            'success': '#36d399',
+            'warning': '#fbbd23',
+            'error': '#f87272',
+          }
+        }
+      }
+    }
+  </script>
+<script type="importmap">
+{
+  "imports": {
+    "rxjs": "https://aistudiocdn.com/rxjs@^7.8.2?conditions=es2015",
+    "rxjs/operators": "https://aistudiocdn.com/rxjs@^7.8.2/operators?conditions=es2015",
+    "rxjs/ajax": "https://aistudiocdn.com/rxjs@^7.8.2/ajax?conditions=es2015",
+    "rxjs/webSocket": "https://aistudiocdn.com/rxjs@^7.8.2/webSocket?conditions=es2015",
+    "rxjs/testing": "https://aistudiocdn.com/rxjs@^7.8.2/testing?conditions=es2015",
+    "rxjs/fetch": "https://aistudiocdn.com/rxjs@^7.8.2/fetch?conditions=es2015",
+    "@angular/compiler": "https://next.esm.sh/@angular/compiler@^20.3.3?external=rxjs",
+    "@angular/core/rxjs-interop": "https://next.esm.sh/@angular/core@^20.3.3/rxjs-interop?external=rxjs",
+    "@angular/core": "https://next.esm.sh/@angular/core@^20.3.3?external=rxjs",
+    "@angular/platform-browser": "https://next.esm.sh/@angular/platform-browser@^20.3.3?external=rxjs",
+    "@angular/router": "https://next.esm.sh/@angular/router@^20.3.3?external=rxjs",
+    "@angular/forms": "https://next.esm.sh/@angular/forms@^20.3.3?external=rxjs"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-base-100 text-gray-200 antialiased">
+  <app-root></app-root>
+</body>
+</html>

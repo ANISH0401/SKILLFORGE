@@ -1,0 +1,43 @@
+<div class="container mx-auto">
+  @if (user(); as currentUser) {
+    <h1 class="text-3xl font-bold text-white mb-2">Welcome, {{ currentUser.name.split(' ')[0] }}!</h1>
+    <p class="text-gray-400 mb-8">Here's your learning dashboard. Let's get started.</p>
+  }
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- Continue Learning -->
+    <div class="bg-base-200 p-6 rounded-xl shadow-lg border border-gray-800">
+      <h2 class="text-xl font-semibold text-white mb-4">Continue Learning</h2>
+      <div class="space-y-4">
+        <p class="text-gray-400">Your last session: Angular Signals</p>
+        <div class="w-full bg-gray-700 rounded-full h-2.5">
+          <div class="bg-primary h-2.5 rounded-full" style="width: 75%"></div>
+        </div>
+        <button class="w-full bg-gradient-to-r from-primary to-secondary text-white font-bold py-2 px-4 rounded-lg hover:opacity-90 transition-opacity">
+          Resume Course
+        </button>
+      </div>
+    </div>
+    
+    <!-- Upcoming Exams -->
+    <div class="bg-base-200 p-6 rounded-xl shadow-lg border border-gray-800">
+      <h2 class="text-xl font-semibold text-white mb-4">Upcoming Exams</h2>
+      <ul class="space-y-3 text-gray-300">
+        <li class="flex justify-between items-center">
+          <span>Advanced TypeScript</span>
+          <span class="text-sm bg-yellow-600/50 text-yellow-300 px-2 py-1 rounded">Tomorrow</span>
+        </li>
+        <li class="flex justify-between items-center">
+          <span>State Management Patterns</span>
+          <span class="text-sm bg-gray-600 px-2 py-1 rounded">In 3 days</span>
+        </li>
+      </ul>
+    </div>
+    
+    <!-- Recommended Courses -->
+    <div class="bg-base-200 p-6 rounded-xl shadow-lg border border-gray-800">
+      <h2 class="text-xl font-semibold text-white mb-4">Recommended for You</h2>
+      <p class="text-gray-400">Based on your progress, we think you'll like "Zoneless Angular Deep Dive".</p>
+    </div>
+  </div>
+</div>
